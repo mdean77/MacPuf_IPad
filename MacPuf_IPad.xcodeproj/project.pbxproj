@@ -36,6 +36,28 @@
 		AC484DC31AD6A67E009EB609 /* MacPuf_IPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacPuf_IPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC484DC81AD6A67E009EB609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC484DC91AD6A67E009EB609 /* MacPuf_IPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacPuf_IPadTests.swift; sourceTree = "<group>"; };
+		ACAA9F391AD6A8D3003390CA /* BAGER.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = BAGER.F; sourceTree = "<group>"; };
+		ACAA9F3A1AD6A8D3003390CA /* BRETH.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = BRETH.F; sourceTree = "<group>"; };
+		ACAA9F3B1AD6A8D3003390CA /* CHECK.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = CHECK.F; sourceTree = "<group>"; };
+		ACAA9F3C1AD6A8D3003390CA /* CLIN1.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = CLIN1.F; sourceTree = "<group>"; };
+		ACAA9F3D1AD6A8D3003390CA /* CLIN2.F (experimental) */ = {isa = PBXFileReference; lastKnownFileType = text; path = "CLIN2.F (experimental)"; sourceTree = "<group>"; };
+		ACAA9F3E1AD6A8D3003390CA /* COMMT.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = COMMT.F; sourceTree = "<group>"; };
+		ACAA9F3F1AD6A8D3003390CA /* CONST.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = CONST.F; sourceTree = "<group>"; };
+		ACAA9F401AD6A8D3003390CA /* DEADY.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = DEADY.F; sourceTree = "<group>"; };
+		ACAA9F411AD6A8D3003390CA /* DEATH.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = DEATH.F; sourceTree = "<group>"; };
+		ACAA9F421AD6A8D3003390CA /* DELAY.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = DELAY.F; sourceTree = "<group>"; };
+		ACAA9F431AD6A8D3003390CA /* DUMP.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = DUMP.F; sourceTree = "<group>"; };
+		ACAA9F441AD6A8D3003390CA /* GASES.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = GASES.F; sourceTree = "<group>"; };
+		ACAA9F451AD6A8D3003390CA /* GSINV.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = GSINV.F; sourceTree = "<group>"; };
+		ACAA9F461AD6A8D3003390CA /* MACPUF17december1981JMD.for */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = MACPUF17december1981JMD.for; sourceTree = "<group>"; };
+		ACAA9F471AD6A8D3003390CA /* MINIT.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = MINIT.F; sourceTree = "<group>"; };
+		ACAA9F481AD6A8D3003390CA /* NXTWD.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = NXTWD.F; sourceTree = "<group>"; };
+		ACAA9F491AD6A8D3003390CA /* outline.f */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = outline.f; sourceTree = "<group>"; };
+		ACAA9F4A1AD6A8D3003390CA /* QUERY.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = QUERY.F; sourceTree = "<group>"; };
+		ACAA9F4B1AD6A8D3003390CA /* SYMPT.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = SYMPT.F; sourceTree = "<group>"; };
+		ACAA9F4C1AD6A8D3003390CA /* UNITS.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = UNITS.F; sourceTree = "<group>"; };
+		ACAA9F4D1AD6A8D3003390CA /* V1.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = V1.F; sourceTree = "<group>"; };
+		ACAA9F4E1AD6A8D3003390CA /* VALUE.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = VALUE.F; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +81,7 @@
 		AC484DA51AD6A67E009EB609 = {
 			isa = PBXGroup;
 			children = (
+				ACAA9F4F1AD6A8DE003390CA /* FORTRAN Source */,
 				AC484DB01AD6A67E009EB609 /* MacPuf_IPad */,
 				AC484DC61AD6A67E009EB609 /* MacPuf_IPadTests */,
 				AC484DAF1AD6A67E009EB609 /* Products */,
@@ -110,6 +133,35 @@
 				AC484DC81AD6A67E009EB609 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACAA9F4F1AD6A8DE003390CA /* FORTRAN Source */ = {
+			isa = PBXGroup;
+			children = (
+				ACAA9F391AD6A8D3003390CA /* BAGER.F */,
+				ACAA9F3A1AD6A8D3003390CA /* BRETH.F */,
+				ACAA9F3B1AD6A8D3003390CA /* CHECK.F */,
+				ACAA9F3C1AD6A8D3003390CA /* CLIN1.F */,
+				ACAA9F3D1AD6A8D3003390CA /* CLIN2.F (experimental) */,
+				ACAA9F3E1AD6A8D3003390CA /* COMMT.F */,
+				ACAA9F3F1AD6A8D3003390CA /* CONST.F */,
+				ACAA9F401AD6A8D3003390CA /* DEADY.F */,
+				ACAA9F411AD6A8D3003390CA /* DEATH.F */,
+				ACAA9F421AD6A8D3003390CA /* DELAY.F */,
+				ACAA9F431AD6A8D3003390CA /* DUMP.F */,
+				ACAA9F441AD6A8D3003390CA /* GASES.F */,
+				ACAA9F451AD6A8D3003390CA /* GSINV.F */,
+				ACAA9F461AD6A8D3003390CA /* MACPUF17december1981JMD.for */,
+				ACAA9F471AD6A8D3003390CA /* MINIT.F */,
+				ACAA9F481AD6A8D3003390CA /* NXTWD.F */,
+				ACAA9F491AD6A8D3003390CA /* outline.f */,
+				ACAA9F4A1AD6A8D3003390CA /* QUERY.F */,
+				ACAA9F4B1AD6A8D3003390CA /* SYMPT.F */,
+				ACAA9F4C1AD6A8D3003390CA /* UNITS.F */,
+				ACAA9F4D1AD6A8D3003390CA /* V1.F */,
+				ACAA9F4E1AD6A8D3003390CA /* VALUE.F */,
+			);
+			name = "FORTRAN Source";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +463,7 @@
 				AC484DCF1AD6A67E009EB609 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC484DD01AD6A67E009EB609 /* Build configuration list for PBXNativeTarget "MacPuf_IPadTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +472,7 @@
 				AC484DD21AD6A67E009EB609 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,1 @@
+        REAL FUNCTION VALUE(ITEM)        INTEGER ITEM(20)        VALUE=0.        I=1        VALUE=V1(ITEM,I)        IF ((ITEM(I).EQ.1).OR.(I.GE.20)) RETURN        I=I+1        VALUE=VALUE*(10.**V1(ITEM,I))        RETURN        END
