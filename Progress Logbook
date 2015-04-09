@@ -1,0 +1,139 @@
+// Log Book
+// J. Michael Dean, MD, MBA
+// Begun January 18 2003
+
+This is a log of my progress, my ideas, etc.  It has become sufficiently impossible to proceed without maintaining such a log.  I plan to add to this with dated entries.
+
+January 18, 2003
+
+Debugging Problems:  The simulator does not work correctly but here are cogent findings. 
+ 
+First, I am unable to locate a leakage of tissue oxygen;  this occurs rapidly and is lethal quite quickly.
+
+Second, if I subject MacPuf to zero percent FiO2 at the onset, then this BETTER preserves tissue oxygenation.  I have no real clue why this would be so except that effluent oxygen content is involved in the tissue calculations.
+
+Third, if I subject MacPuf to 100 FiO2 then this prevents him from dying from tissue oxygen starvation.
+
+Fourth, the mode of death is for bicarbonate to become negative and an arithmetic error occurs.
+
+IF I put Macpuf into 5% CO2 (FiC2) this has a large effect on tidal volume but no effect on respiratory rate.  Actually, if I run this for a while, the only compartment that is really wrong, compared with the Fortran version, is the tissue compartment.  All other compartments are roughly right.
+
+Ideas for Future (after debugging is done!)
+
+1.  Add and account for SIMLT throughout because the simulator will become of more use to the international community if I permit the use of SI units.
+
+2.  There are several calls to BAGER and this needs to be implemented.
+
+3.  There is no DEATH or SYMPT routine.  I think the right way to handle this is by throwing exceptions.
+
+4.  There is no range check on any variables selected by the user.  There needs to be a range check routine.
+
+5.  I need to check the units.f and units2.f routines to make sure there is nothing going on there that must be replicated.  I believe these are entirely related to the SIMLT translation to support SI units, and must keep this in mind later when I implement SIMLT.
+
+6.  Design the ventilator screen.  Currently the simulator is in spontaneous mode only.
+
+7.  Design the bag experiments, etc.  Currently unavailable.
+
+8.  Implement detailed help descriptions for each variable that can be changed.
+
+9.  Implement program-wide help system.
+
+Debugger Issues
+
+The gdb debugger is superb and after invocation one can use disp varname statements so that there is automatic display of vars of interest at each interruption.  I have printed out much of the manual and it is in the MacPuf booklet that contains current program listings.
+
+Overall Object Orientation
+
+I have eliminated moving any physiology code out of human.m because this makes it simpler to debug the program.  I believe that the human object makes sense, anyway, as the main model.  The various pieces (heart, brain, etc.) are objects that handle their internals.
+
+January 19, 2003
+
+Figured out how to compile the FORTRAN version.  Use the script "build" that is in the source directory.  It just calls g77 with all the file names after it, but they need to be in the order that is in the script.
+
+Ran the FORTRAN version with some additional print statements and XVENT is off by an order of magnitude in my current version. This turns out to be because of a different iteration.  When I set the iteration to 1 second, I get the exact same DVENT and XVENT values in both versions.
+
+I had a question about the pH of the brain in the section where this is averaged for the chemoceptor.  The current version is, I believe, correct.
+
+February 3 2003
+
+Extremely bizarre problem.  Involves calculation of fitness adjusted cardiac output per iteration, which calculates out 10 times smaller than it should - this drives tissue po2 into the toilet.
+
+The interesting problem is that the debugger indicates everything is in order but it does not work.
+The code is here:
+
+    [myHeart setDecilitersPerIteration:[myHeart effectiveCardiacOutput]*c17];
+    [myHeart setFitnessAdjustedOutputPerIteration:([myHeart decilitersPerIteration]*(1 - c69*[myHeart effectiveCardiacOutput]))];
+    
+
+(gdb) p c69
+$1 = 0.0027999999
+(gdb) p 1- c69* myHeart.effectiveCardiacOutput
+$2 = 0.98612993270738558
+(gdb) p myHeart.decilitersPerIteration*0.98612
+$3 = 0.81413999432086948
+(gdb) 
+
+However, fitnessAdjustedOutputPerIteration now has a value of 0.0814148188 which is off by ten.  The debugger information also shows the correct value for decilitersPerIteration (0.825599313).
+
+Just to make sure, I retyped the expression directly as follows and again it is off by 10.
+
+(gdb) p myHeart.decilitersPerIteration*(1 - c69*myHeart.effectiveCardiacOutput)
+$1 = 0.81414819475726108
+(gdb) p myHeart.fitnessAdjustedOutputPerIteration
+$2 = 0.0814148188
+(gdb) 
+
+I have posted this to the developer discussion groups.
+
+February 3, 2003  - Non-Random Ideas from Carmel Trip
+
+Question.  How do I cleanly move information from the GUI to an object that is embedded in the hierarchy?  Specifically, if I toggle the ventilator ON in the GUI, I would need to send the information to the myDocument controller which would then tell the myHuman object which would then tell the myVentilator object;  the ventilator object would check the various parameters it needs to check and would then send information back up the chain so that the GUI would display the settings.  This seems very "brute force" to me.
+
+Alternative is to connect the GUI directly to the ventilator object but then I have mucked up the MVC model in a serious way, I think.
+
+Another alternative is to use notifications.
+
+Another aspect is that I could build logic about the display into the myDocument controller instead of the ventilator object.  This is a special case in that the GUI display actually does not involve the model itself, so I guess it does not totally violate the separation of model and view.  
+
+Question.  Should I keep the front panel GUI generic so that I can use the same panel for Macpee, etc.
+
+Idea.  Next big deal is to incorporate MacMan into Puff because it would allow better interaction with cardiac output, intrathoracic pressure, etc.
+
+Idea.  Preset patients.  Instead of writing the code to create these, I could create the preset patients as MacPuf 
+"runs" and then save them as files.  This has a lot of advantages.  First, there could be annotation versions since the textview would be part of the saved file.  Each preset patient might have the simple "start her up" version and the more complete "how I build the preset with clinical scenario, etc." version.  This would allow me or any user to create any number of preset patients merely by saving them on the disk.  It also would allow the instructor to create presets but release the annotated version at a different time.
+
+The manual could contain "recipes" for creating the patients, in case the user obliviously destroys the files on the disk.
+
+Downside is conversion between SI units and mm Hg - this cannot be changed in the middle of the simulation, so I would need to create the preset patients in each set of units.  However THIS RAISES QUESTION:  Why can't I change SIMLT during the simulation?  This should just involve a run through the constant calculations, and then everything really should run.  Something to consider in the future.
+
+February 9,2003
+
+Have struggled with floating point issue but realized that the problem was occuring only with fitness adjusted cardiac output.  I patched out all instances of this, and substituted 98% of decilitersPeriteration, and the result is that the simulation now runs essentially correctly.
+
+I also was calling myVeins calcContents, which is not necessary andnot correct so it has been deleted.  I made some cosmetic changes in the venous reporting because mixed venous gas tensions should be the same as tissue.
+
+The next major issues are to hook up the ventilator, and then to work out saving MacPuf objects to disk.
+
+February 16, 2003
+
+Problems hooking up the ventilator.  I finally discovered that I should create the action inside the NSDocument object inside Interface Builder, NOT by reading the files in from Project Builder.  I also create the same named actions inside PB inside the controller object.  When I hook these up, everything works.  When I read the methods in from PB into IB, somehow the methods were being called automatically and I have not figured out why.  The problem is the vars were not defined at the time these methods were called so I was getting stuff set to nil.
+
+There is a minor problem with the ventilator settings of I time, E time, the ratio, and the flow rate.  These are decorative items, and I need to make them more sensible.  However, obviously one would not leave 40% of the time for inspiration if the rate is very very low;  I need to better understand the impact of SPACE anyway.
+
+Have also been able to install g77 properly and get the paths all straightened out.  This means I can at least try to compile the FORTRAN version as necessary.
+
+Need to set up the view so that everything is at the end of it instead of where annotations might be.
+
+March 2, 2003
+
+Solved the text annotation problem:
+    int textLength;
+    textLength = [[textView string] length];
+    [textView setSelectedRange:NSMakeRange(textLength, 0)];
+    [textView insertText:header1];
+    
+I probably should make this a subroutine but right now it is buried in simulate, inspect, and change variables.  When the ventilator puts input into the textView, yet to be done, I will need to have this code there as well, but otherwise I am probably done with insertion point manipulations.
+
+I have fixed the initial array of reference values in MyDocument so that simulator does not indicate changes of variables at the beginning of the run.  This array is only decorative but is the method for changing values, etc.  It is not elegant to have values in two locations but there are only 30 and are now corrected.  Someday I may want to improve this.
+
+I still need to have ventilator changes reflected immediately in the reference array - it is reflected after a run, but not just after accepting ventilator settings.  I also need the settings to be entered into the textview transcript similar to the changed variables routine.  Perhaps I can call that routine in some fashion.

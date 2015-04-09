@@ -13,6 +13,8 @@
 		AC484DBB1AD6A67E009EB609 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC484DBA1AD6A67E009EB609 /* Images.xcassets */; };
 		AC484DBE1AD6A67E009EB609 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC484DBC1AD6A67E009EB609 /* LaunchScreen.xib */; };
 		AC484DCA1AD6A67E009EB609 /* MacPuf_IPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC484DC91AD6A67E009EB609 /* MacPuf_IPadTests.swift */; };
+		ACAA9F6B1AD6A9E8003390CA /* Metabolizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA9F6A1AD6A9E8003390CA /* Metabolizer.swift */; };
+		ACAA9F701AD6AAF1003390CA /* MacPuffBook.pdf in Resources */ = {isa = PBXBuildFile; fileRef = ACAA9F6F1AD6AAF1003390CA /* MacPuffBook.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,7 @@
 		AC484DC31AD6A67E009EB609 /* MacPuf_IPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacPuf_IPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC484DC81AD6A67E009EB609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC484DC91AD6A67E009EB609 /* MacPuf_IPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacPuf_IPadTests.swift; sourceTree = "<group>"; };
-		ACAA9F391AD6A8D3003390CA /* BAGER.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = BAGER.F; sourceTree = "<group>"; };
+		ACAA9F391AD6A8D3003390CA /* BAGER.F */ = {isa = PBXFileReference; explicitFileType = sourcecode.fortran.f77; path = BAGER.F; sourceTree = "<group>"; };
 		ACAA9F3A1AD6A8D3003390CA /* BRETH.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = BRETH.F; sourceTree = "<group>"; };
 		ACAA9F3B1AD6A8D3003390CA /* CHECK.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = CHECK.F; sourceTree = "<group>"; };
 		ACAA9F3C1AD6A8D3003390CA /* CLIN1.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = CLIN1.F; sourceTree = "<group>"; };
@@ -83,6 +85,10 @@
 		ACAA9F661AD6A975003390CA /* VenousPool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VenousPool.m; sourceTree = "<group>"; };
 		ACAA9F671AD6A975003390CA /* Ventilator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ventilator.h; sourceTree = "<group>"; };
 		ACAA9F681AD6A975003390CA /* Ventilator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ventilator.m; sourceTree = "<group>"; };
+		ACAA9F6A1AD6A9E8003390CA /* Metabolizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metabolizer.swift; sourceTree = "<group>"; };
+		ACAA9F6C1AD6AA2C003390CA /* Progress Logbook */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Progress Logbook"; sourceTree = "<group>"; };
+		ACAA9F6D1AD6AA2C003390CA /* VARIABLES */ = {isa = PBXFileReference; lastKnownFileType = text; path = VARIABLES; sourceTree = "<group>"; };
+		ACAA9F6F1AD6AAF1003390CA /* MacPuffBook.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = MacPuffBook.pdf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 		AC484DA51AD6A67E009EB609 = {
 			isa = PBXGroup;
 			children = (
+				ACAA9F6E1AD6AA3A003390CA /* Documentation */,
 				ACAA9F691AD6A981003390CA /* Objective C Source */,
 				ACAA9F4F1AD6A8DE003390CA /* FORTRAN Source */,
 				AC484DB01AD6A67E009EB609 /* MacPuf_IPad */,
@@ -126,6 +133,7 @@
 		AC484DB01AD6A67E009EB609 /* MacPuf_IPad */ = {
 			isa = PBXGroup;
 			children = (
+				ACAA9F6A1AD6A9E8003390CA /* Metabolizer.swift */,
 				AC484DB31AD6A67E009EB609 /* AppDelegate.swift */,
 				AC484DB51AD6A67E009EB609 /* ViewController.swift */,
 				AC484DB71AD6A67E009EB609 /* Main.storyboard */,
@@ -222,6 +230,16 @@
 			name = "Objective C Source";
 			sourceTree = "<group>";
 		};
+		ACAA9F6E1AD6AA3A003390CA /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				ACAA9F6F1AD6AAF1003390CA /* MacPuffBook.pdf */,
+				ACAA9F6C1AD6AA2C003390CA /* Progress Logbook */,
+				ACAA9F6D1AD6AA2C003390CA /* VARIABLES */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -302,6 +320,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACAA9F701AD6AAF1003390CA /* MacPuffBook.pdf in Resources */,
 				AC484DB91AD6A67E009EB609 /* Main.storyboard in Resources */,
 				AC484DBE1AD6A67E009EB609 /* LaunchScreen.xib in Resources */,
 				AC484DBB1AD6A67E009EB609 /* Images.xcassets in Resources */,
@@ -322,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACAA9F6B1AD6A9E8003390CA /* Metabolizer.swift in Sources */,
 				AC484DB61AD6A67E009EB609 /* ViewController.swift in Sources */,
 				AC484DB41AD6A67E009EB609 /* AppDelegate.swift in Sources */,
 			);

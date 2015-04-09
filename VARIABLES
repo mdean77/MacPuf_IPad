@@ -1,0 +1,77 @@
+
+//  Variables Listing.  J. Michael Dean, January 19, 2003
+//  Listing of Macpuf variables with initial values from September 1987
+//  Needs to be used to assure I have initialized all objects in my version
+
+
+    1		FIO2,         	FIC2,      	CO,          	PD,				FADM,
+			20.9300,      	0.0300,    	100.0000,    	100.0000,      	0.0000,
+    
+			BULLA,	      	VLUNG,    	ELAST,       	VADM,          	AZ,
+			0.0000,       	3000.,     	5.0000,      	3.0000,  	100.0000,
+      
+    11		BZ,          	CZ,          	BARPR,      	TEMP,         	TRQ,
+			100.0000,    	100.0000,    	760.0000,   	37.0000,      	0.8000,
+    
+			TC2MT,			TVOL,			HB,				PCV,			VBLVL,
+			13.3736,     	12.0000,     	14.8000,     	45.0000,   	3000.0000,
+     
+    21    	ADDC3,			BC3AJ,			DPG,			PR,				FITNS,
+			0.0000,     	-0.0678,      	3.7843,    	100.0000,     	28.0000,
+    
+			SPACE,			COMAX,			SHUNT,			VC,				PEEP,
+			0.4000,     	35.0000,      	0.0000,      	5.0000,      	0.0000,
+    
+    31    	VO2CT,			RCOAJ,			RPH,			VPH,			FVENT,
+			14.4921,    	100.0000,      	7.3973,      	7.3710,      	4.3957,
+   
+			BPH,			BAGO,			BAGC,			AO2MT,			AC2MT,
+			7.3290,      	0.0000,      	0.0000,    	346.1360,    	144.7786,
+     
+    41    	AO2PR,			AC2PR,			DPH,			XLACT,			BO2PR,
+			101.6193,     	39.9436,      	7.3996,      	0.0006,     	29.1427,
+ 
+			BC2PR,			TIDVL,			RRATE,			RO2CT,		VC2MT,
+			53.0981,    	477.1105,     	12.6881,     	19.5328,   	1543.2665,
+     
+    51    	DVENT,			SVENT,			PC2CT,			PO2CT,			TO2CT,
+			6.0536,      	6.0536,     	47.3157,     	19.6547,     	14.4212,
+    
+			TC2CT,			BO2CT,			BC2CT,			TPH,			RC3CT,
+			51.4988,     	10.1284,     	56.6056,      	7.3721,     	23.8357,
+    
+    61    	VC2CT,			RO2MT,			RC2MT,			XRESP,		AN2MT,
+			51.4422,    	195.3276,    	474.1322,      	8.8777,   	1987.6002,
+    
+			BO2MT,			BC2MT,			CBF,			PC,			DSPAC,
+			18.2142,    	680.7448,    	52.3808,      	0.7993,    	130.6685,
+     
+    71   	REFLV,			RO2PR,			CONSO,			RC2PR,			PG,
+			3000.0000,     	93.4906,    	240.0000,     	40.0676,      	0.0000,
+    
+			PJ,				TND,			RC2CT,			QB,				PW,
+			97.0730,      	0.0851,     	47.4132,    	199.5492,      	2.3618,
+   
+    81    	FT,				CONOM,			BUBBL,			TC2RF,			TC3MT,
+			0.083334,    	4.6000,      	0.0000,     	-0.2543,    	317.5415,
+    
+			VC3MT,			TC3CT,			VC3CT,			TLAMT,			RLACT,
+			71.2432,     	25.5284,     	25.4605,     	34.7917,      	0.9940,
+   
+    91    	BC3CT,			BO2AD,			COADJ,			EO2CT,			TO2MT,
+			22.7000,      	1.0000,      	4.9528,     	19.5328,    	177.4896,
+   
+			TO2PR,			TC2PR,			VO2MT,			AVENT,			PL,
+			39.9351,     	45.4757,    	434.7640,    	366.3107,      	0.0000,
+    
+   101    	EC2CT,			TN2MT,			TN2PR,			FEV,		SN2PR,
+			47.4132,     	76.1708,    	571.2808,      	4.0000,    	570.0273,
+   
+			EN2CT,			UN2MT,			RN2MT,		BARRF,			SIMLT,
+			0.7257,      	0.0000,      	7.2573,    	713.0100,      	1.0000,
+     
+   111    	TC3AJ,			SN2MT,			QA,				RVADM,			XDSPA,
+			-0.0677,    	977.1898,    	249.6541,      	0.0000,      	0.0000,
+  
+			BAG,			XMALE,		HT,				WT,				XC2PR,
+			0.0000,      	1.0000,    	178.0000,     	70.0000,     	45.4757
