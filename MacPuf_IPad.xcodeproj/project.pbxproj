@@ -58,6 +58,31 @@
 		ACAA9F4C1AD6A8D3003390CA /* UNITS.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = UNITS.F; sourceTree = "<group>"; };
 		ACAA9F4D1AD6A8D3003390CA /* V1.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = V1.F; sourceTree = "<group>"; };
 		ACAA9F4E1AD6A8D3003390CA /* VALUE.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = VALUE.F; sourceTree = "<group>"; };
+		ACAA9F501AD6A975003390CA /* ArterialPool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArterialPool.h; sourceTree = "<group>"; };
+		ACAA9F511AD6A975003390CA /* ArterialPool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArterialPool.m; sourceTree = "<group>"; };
+		ACAA9F521AD6A975003390CA /* Bag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bag.h; sourceTree = "<group>"; };
+		ACAA9F531AD6A975003390CA /* Bag.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Bag.m; sourceTree = "<group>"; };
+		ACAA9F541AD6A975003390CA /* Brain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Brain.h; sourceTree = "<group>"; };
+		ACAA9F551AD6A975003390CA /* Brain.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Brain.m; sourceTree = "<group>"; };
+		ACAA9F561AD6A975003390CA /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		ACAA9F571AD6A975003390CA /* Factors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Factors.h; sourceTree = "<group>"; };
+		ACAA9F581AD6A975003390CA /* Factors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Factors.m; sourceTree = "<group>"; };
+		ACAA9F591AD6A975003390CA /* Heart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Heart.h; sourceTree = "<group>"; };
+		ACAA9F5A1AD6A975003390CA /* Heart.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Heart.m; sourceTree = "<group>"; };
+		ACAA9F5B1AD6A975003390CA /* Human.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Human.h; sourceTree = "<group>"; };
+		ACAA9F5C1AD6A975003390CA /* Human.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Human.m; sourceTree = "<group>"; };
+		ACAA9F5D1AD6A975003390CA /* Lung.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lung.h; sourceTree = "<group>"; };
+		ACAA9F5E1AD6A975003390CA /* Lung.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lung.m; sourceTree = "<group>"; };
+		ACAA9F5F1AD6A975003390CA /* Metabolizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Metabolizer.h; sourceTree = "<group>"; };
+		ACAA9F601AD6A975003390CA /* Metabolizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Metabolizer.m; sourceTree = "<group>"; };
+		ACAA9F611AD6A975003390CA /* MyDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyDocument.h; sourceTree = "<group>"; };
+		ACAA9F621AD6A975003390CA /* MyDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyDocument.m; sourceTree = "<group>"; };
+		ACAA9F631AD6A975003390CA /* Tissue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tissue.h; sourceTree = "<group>"; };
+		ACAA9F641AD6A975003390CA /* Tissue.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tissue.m; sourceTree = "<group>"; };
+		ACAA9F651AD6A975003390CA /* VenousPool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VenousPool.h; sourceTree = "<group>"; };
+		ACAA9F661AD6A975003390CA /* VenousPool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VenousPool.m; sourceTree = "<group>"; };
+		ACAA9F671AD6A975003390CA /* Ventilator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Ventilator.h; sourceTree = "<group>"; };
+		ACAA9F681AD6A975003390CA /* Ventilator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Ventilator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +106,7 @@
 		AC484DA51AD6A67E009EB609 = {
 			isa = PBXGroup;
 			children = (
+				ACAA9F691AD6A981003390CA /* Objective C Source */,
 				ACAA9F4F1AD6A8DE003390CA /* FORTRAN Source */,
 				AC484DB01AD6A67E009EB609 /* MacPuf_IPad */,
 				AC484DC61AD6A67E009EB609 /* MacPuf_IPadTests */,
@@ -162,6 +188,38 @@
 				ACAA9F4E1AD6A8D3003390CA /* VALUE.F */,
 			);
 			name = "FORTRAN Source";
+			sourceTree = "<group>";
+		};
+		ACAA9F691AD6A981003390CA /* Objective C Source */ = {
+			isa = PBXGroup;
+			children = (
+				ACAA9F501AD6A975003390CA /* ArterialPool.h */,
+				ACAA9F511AD6A975003390CA /* ArterialPool.m */,
+				ACAA9F521AD6A975003390CA /* Bag.h */,
+				ACAA9F531AD6A975003390CA /* Bag.m */,
+				ACAA9F541AD6A975003390CA /* Brain.h */,
+				ACAA9F551AD6A975003390CA /* Brain.m */,
+				ACAA9F561AD6A975003390CA /* Credits.rtf */,
+				ACAA9F571AD6A975003390CA /* Factors.h */,
+				ACAA9F581AD6A975003390CA /* Factors.m */,
+				ACAA9F591AD6A975003390CA /* Heart.h */,
+				ACAA9F5A1AD6A975003390CA /* Heart.m */,
+				ACAA9F5B1AD6A975003390CA /* Human.h */,
+				ACAA9F5C1AD6A975003390CA /* Human.m */,
+				ACAA9F5D1AD6A975003390CA /* Lung.h */,
+				ACAA9F5E1AD6A975003390CA /* Lung.m */,
+				ACAA9F5F1AD6A975003390CA /* Metabolizer.h */,
+				ACAA9F601AD6A975003390CA /* Metabolizer.m */,
+				ACAA9F611AD6A975003390CA /* MyDocument.h */,
+				ACAA9F621AD6A975003390CA /* MyDocument.m */,
+				ACAA9F631AD6A975003390CA /* Tissue.h */,
+				ACAA9F641AD6A975003390CA /* Tissue.m */,
+				ACAA9F651AD6A975003390CA /* VenousPool.h */,
+				ACAA9F661AD6A975003390CA /* VenousPool.m */,
+				ACAA9F671AD6A975003390CA /* Ventilator.h */,
+				ACAA9F681AD6A975003390CA /* Ventilator.m */,
+			);
+			name = "Objective C Source";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
