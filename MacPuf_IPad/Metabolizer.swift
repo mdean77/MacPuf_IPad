@@ -14,16 +14,22 @@
 import Foundation
 
 class Metabolizer  {
-	var amountOfOxygen = 0.0
-	var	pO2 = 0.0
-	var	oxygenContent = 0.0
-	var	oxygenSaturation = 0.0
-	var	amountOfCO2 = 0.0
-	var	pCO2 = 0.0
-	var	carbonDioxideContent = 0.0
-	var	bicarbonateContent = 0.0
-	var	pH = 0.0
+	
 
+	var amountOfOxygen:Double
+	var	pO2:Double
+	var	oxygenContent:Double
+	var	oxygenSaturation:Double
+	var	amountOfCO2:Double
+	var	pCO2:Double
+	var	carbonDioxideContent:Double
+	var	bicarbonateContent:Double
+	var	pH:Double
+	
+	init(){
+		(amountOfOxygen, pO2,oxygenContent,oxygenSaturation,amountOfCO2,pCO2,carbonDioxideContent,bicarbonateContent,pH) = (0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0)
+	}
+	
 	// sign(f,g) = sgn(g) * abs(f)
 	func sign(op1:Double, op2:Double) -> Double {
 		return op2 < 0 ? -abs(op1) : abs(op1)
@@ -80,7 +86,6 @@ class Metabolizer  {
 			carbonDioxideContent = co2Content
 			oxygenSaturation = saturation
 	}
-	
-
-	
 }
+
+

@@ -13,6 +13,8 @@
 		AC484DBB1AD6A67E009EB609 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC484DBA1AD6A67E009EB609 /* Images.xcassets */; };
 		AC484DBE1AD6A67E009EB609 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC484DBC1AD6A67E009EB609 /* LaunchScreen.xib */; };
 		AC484DCA1AD6A67E009EB609 /* MacPuf_IPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC484DC91AD6A67E009EB609 /* MacPuf_IPadTests.swift */; };
+		AC6481EB1AD83981004FD214 /* Heart.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6481EA1AD83981004FD214 /* Heart.swift */; };
+		AC6481EF1AD97A01004FD214 /* Bag.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6481EE1AD97A01004FD214 /* Bag.swift */; };
 		ACAA9F6B1AD6A9E8003390CA /* Metabolizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA9F6A1AD6A9E8003390CA /* Metabolizer.swift */; };
 		ACAA9F701AD6AAF1003390CA /* MacPuffBook.pdf in Resources */ = {isa = PBXBuildFile; fileRef = ACAA9F6F1AD6AAF1003390CA /* MacPuffBook.pdf */; };
 		ACAA9F741AD6ADBD003390CA /* ArterialPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACAA9F731AD6ADBD003390CA /* ArterialPool.swift */; };
@@ -39,6 +41,8 @@
 		AC484DC31AD6A67E009EB609 /* MacPuf_IPadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacPuf_IPadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC484DC81AD6A67E009EB609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC484DC91AD6A67E009EB609 /* MacPuf_IPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacPuf_IPadTests.swift; sourceTree = "<group>"; };
+		AC6481EA1AD83981004FD214 /* Heart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heart.swift; sourceTree = "<group>"; };
+		AC6481EE1AD97A01004FD214 /* Bag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
 		ACAA9F391AD6A8D3003390CA /* BAGER.F */ = {isa = PBXFileReference; explicitFileType = sourcecode.fortran.f77; path = BAGER.F; sourceTree = "<group>"; };
 		ACAA9F3A1AD6A8D3003390CA /* BRETH.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = BRETH.F; sourceTree = "<group>"; };
 		ACAA9F3B1AD6A8D3003390CA /* CHECK.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = CHECK.F; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 		AC484DA51AD6A67E009EB609 = {
 			isa = PBXGroup;
 			children = (
+				AC6481EE1AD97A01004FD214 /* Bag.swift */,
 				ACAA9F6E1AD6AA3A003390CA /* Documentation */,
 				ACAA9F691AD6A981003390CA /* Objective C Source */,
 				ACAA9F4F1AD6A8DE003390CA /* FORTRAN Source */,
@@ -135,6 +140,7 @@
 		AC484DB01AD6A67E009EB609 /* MacPuf_IPad */ = {
 			isa = PBXGroup;
 			children = (
+				AC6481EA1AD83981004FD214 /* Heart.swift */,
 				ACAA9F731AD6ADBD003390CA /* ArterialPool.swift */,
 				ACAA9F6A1AD6A9E8003390CA /* Metabolizer.swift */,
 				AC484DB31AD6A67E009EB609 /* AppDelegate.swift */,
@@ -346,7 +352,9 @@
 			files = (
 				ACAA9F6B1AD6A9E8003390CA /* Metabolizer.swift in Sources */,
 				AC484DB61AD6A67E009EB609 /* ViewController.swift in Sources */,
+				AC6481EB1AD83981004FD214 /* Heart.swift in Sources */,
 				AC484DB41AD6A67E009EB609 /* AppDelegate.swift in Sources */,
+				AC6481EF1AD97A01004FD214 /* Bag.swift in Sources */,
 				ACAA9F741AD6ADBD003390CA /* ArterialPool.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
