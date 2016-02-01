@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -42,7 +42,7 @@
 		AC484DC81AD6A67E009EB609 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC484DC91AD6A67E009EB609 /* MacPuf_IPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacPuf_IPadTests.swift; sourceTree = "<group>"; };
 		AC6481EA1AD83981004FD214 /* Heart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Heart.swift; sourceTree = "<group>"; };
-		AC6481EE1AD97A01004FD214 /* Bag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bag.swift; sourceTree = "<group>"; };
+		AC6481EE1AD97A01004FD214 /* Bag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Bag.swift; path = ../Bag.swift; sourceTree = "<group>"; };
 		ACAA9F391AD6A8D3003390CA /* BAGER.F */ = {isa = PBXFileReference; explicitFileType = sourcecode.fortran.f77; path = BAGER.F; sourceTree = "<group>"; };
 		ACAA9F3A1AD6A8D3003390CA /* BRETH.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = BRETH.F; sourceTree = "<group>"; };
 		ACAA9F3B1AD6A8D3003390CA /* CHECK.F */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.fortran; path = CHECK.F; sourceTree = "<group>"; };
@@ -118,7 +118,6 @@
 		AC484DA51AD6A67E009EB609 = {
 			isa = PBXGroup;
 			children = (
-				AC6481EE1AD97A01004FD214 /* Bag.swift */,
 				ACAA9F6E1AD6AA3A003390CA /* Documentation */,
 				ACAA9F691AD6A981003390CA /* Objective C Source */,
 				ACAA9F4F1AD6A8DE003390CA /* FORTRAN Source */,
@@ -140,6 +139,7 @@
 		AC484DB01AD6A67E009EB609 /* MacPuf_IPad */ = {
 			isa = PBXGroup;
 			children = (
+				AC6481EE1AD97A01004FD214 /* Bag.swift */,
 				AC6481EA1AD83981004FD214 /* Heart.swift */,
 				ACAA9F731AD6ADBD003390CA /* ArterialPool.swift */,
 				ACAA9F6A1AD6A9E8003390CA /* Metabolizer.swift */,
@@ -295,7 +295,7 @@
 			attributes = {
 				LastSwiftMigration = 0720;
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "J Michael Dean";
 				TargetAttributes = {
 					AC484DAD1AD6A67E009EB609 = {
@@ -308,7 +308,7 @@
 				};
 			};
 			buildConfigurationList = AC484DA91AD6A67E009EB609 /* Build configuration list for PBXProject "MacPuf_IPad" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -420,10 +420,11 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -435,11 +436,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
@@ -466,7 +467,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -474,7 +475,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 2;
@@ -488,6 +489,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MacPuf_IPad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "J.-Michael-Dean.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -498,6 +500,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MacPuf_IPad/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "J.-Michael-Dean.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -516,6 +519,7 @@
 				);
 				INFOPLIST_FILE = MacPuf_IPadTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "J.-Michael-Dean.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacPuf_IPad.app/MacPuf_IPad";
 			};
@@ -531,6 +535,7 @@
 				);
 				INFOPLIST_FILE = MacPuf_IPadTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "J.-Michael-Dean.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MacPuf_IPad.app/MacPuf_IPad";
 			};
