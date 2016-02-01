@@ -65,7 +65,7 @@ class ArterialPool: Metabolizer{
 			var pO2 = pO2initial		//set initial estimate as what was fed in from MacPuf
 			var pCO2 = pCO2initial	//set initial estimate as what was fed in from MacPuf
 			
-			do {
+			repeat {
 				// Do the first estimation by calling calculateContents with these initial guesses
 				calculateContents(pH, temperature:temperature, DPG:DPG, Hct:Hct, Hgb:Hgb)
 				
