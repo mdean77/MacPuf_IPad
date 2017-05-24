@@ -10,13 +10,13 @@ import Foundation
 
 class Heart : Metabolizer {
 	
-	var	cardiacFunction:Double = 0.0										// MacPuf variable CO		Factor 3
+	var	cardiacFunction:Double = 0.0					// MacPuf variable CO		Factor 3
 	var	effectiveCardiacOutput:Double = 0.0             // MacPuf variable COADJ	Factor 93
 	var	maximumCardiacOutput:Double = 0.0               // MacPuf variable COMAX	Factor 27
 	var	restingCardiacOutput:Double = 0.0               // MacPuf variable CONOM	Factor 82
-	var	leftToRightShunt:Double = 0.0										// MacPuf variable SHUNT	Factor 28
-	var	rightToLeftShunt:Double = 0.0										// MacPuf variable FADM		Factor 5
-	var	admixtureEffect:Double = 0.0										// MacPuf variable VADM		Factor 9
+	var	leftToRightShunt:Double = 0.0					// MacPuf variable SHUNT	Factor 28
+	var	rightToLeftShunt:Double = 0.0					// MacPuf variable FADM		Factor 5
+	var	admixtureEffect:Double = 0.0					// MacPuf variable VADM		Factor 9
 	var	effectiveVenousAdmixture:Double = 0.0           // MacPuf variable PW		Factor 80
 	var	decilitersPerIteration:Double = 0.0             // MacPuf variable FTCO
 	var	fitnessAdjustedOutputPerIteration:Double = 0.0	// MacPuf variable FTCOC
